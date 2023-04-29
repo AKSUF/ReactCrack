@@ -1,16 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
 
 function Clock(){
-    return(
-<h1 className='heding'>
-<span className='text'>Hello{new Date().toLocaleTimeString()}</span>
-
-</h1>
-
-    )
+    return (
+        <h1 className='heding'>
+            <span className='text'>Hello {new Date().toLocaleTimeString()}</span>
+        </h1>
+    );
 }
 
+ReactDOM.render(<Clock/>, document.getElementById('root'));
 
-ReactDOM.render(<Clock/>,document.getElementById("root"));
+
