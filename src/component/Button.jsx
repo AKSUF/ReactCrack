@@ -10,13 +10,23 @@ if(currentChange===nextChange && nextLocale===currentLocale){
 }
 
 }
+
 render(){
-    const {change,locale}=this.props;
+    const {change,locale,show}=this.props;
  
     return(
-        <div>
-<button type="button" class="button" onClick={()=>change(locale)}>Start</button>
-        </div>
+        <>
+    
+<button type="button" class="button" onClick={()=>change(locale)}>
+
+  {locale==='bn-BD'?'Change Clock':'Change your clock'}
+    
+    </button>
+{ show && <p>Hello</p>}
+      
+
+        </>
+
     )
 }
 }

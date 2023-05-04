@@ -24,22 +24,15 @@ tick(){
 }
     render() {
 const {date,locale}=this.state;
-let button;
-if(locale==='bn-BD'){
- button=(<Button change={this.handleClick} locale="en-US">
- Click here
- </Button>);
-}else{
-button=(<Button change={this.handleClick} locale="bn-BD">
-Click here
-</Button>);
-}
+
  return (
         <div class="clock-container">
         <h1 class="heading">
           <span class="text">Hello {this.state.date.toLocaleTimeString(locale)}</span>
         </h1>
-{button}
+{locale==='bn-BD'?(<Button change={this.handleClick} locale="en-US" show={false}/>
+):(<Button change={this.handleClick} locale="bn-BD" show/>
+)}
       </div>
       
       );
