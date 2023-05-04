@@ -7,10 +7,6 @@ class Clock extends React.Component {
 //     super(props);
 //     this.state={date:new Date()};
 // }
-
-
-
-
 state={date:new Date(),locale:'bn-BD'};
 
 componentDidMount(){
@@ -62,8 +58,7 @@ const {date,locale}=this.state;
 {/* //when you try this key word problem with arrow function */}
 {/* <button type="button" class="button" onClick={()=>this.handleClick('en-US')}>Start</button> */}
 {/* //to test button from in differentcomponent */}
-<Button change={this.handleClick.bind(this,'en-US')}>
-
+<Button change={this.handleClick} locale="en-US">
 Click here
 </Button>
 
