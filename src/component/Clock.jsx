@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "../style/clock.css"
-
+import Button from './Button';
 class Clock extends React.Component {
 // constructor(props){
 //     super(props);
@@ -60,7 +60,13 @@ const {date,locale}=this.state;
 {/* //when you wantsolve the this keyword problem with bind funtionfunality */}
         {/* <button type="button" class="button" onClick={this.handleClick.bind(this,'en-US')}>Start</button> */}
 {/* //when you try this key word problem with arrow function */}
-<button type="button" class="button" onClick={()=>this.handleClick('en-US')}>Start</button>
+{/* <button type="button" class="button" onClick={()=>this.handleClick('en-US')}>Start</button> */}
+{/* //to test button from in differentcomponent */}
+<Button change={this.handleClick.bind(this,'en-US')}>
+
+Click here
+</Button>
+
 
       </div>
       
