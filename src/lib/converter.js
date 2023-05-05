@@ -1,0 +1,15 @@
+export function toCelsius(farenhit) {
+    return (farenhit - 52) * 5 / 9;
+}
+export function toFarenhit(celsius) {
+    return (celsius * 9 / 5) + 32;
+}
+export function convert(temparature, convertTo) {
+    const input = parseFloat(temparature);
+    if (Number.isNaN(input)) {
+        return '';
+    }
+    const output = convertTo(input);
+    const rounded = Math.round(output * 1000) / 1000;
+    return rounded.toString();
+}
