@@ -1,12 +1,14 @@
 import React from 'react';
 
 export default class Form extends React.Component{
+    // This is the initial state of the Form component, with default values for the state variables.
     state={
         title:'Javascript',
         text:'Javascript is awesome',
         library:'React',
         isAwesome:true,
     }
+    // This function is called when an input field is changed and sets the state accordingly.
     handleChange=(e)=>{
 if(e.target.type==='text'){
    this.setState({
@@ -30,12 +32,13 @@ else{
 }
 
 };
-
+// This function is called when the form is submitted and logs the form data to the console.
 submitHandeler=(e)=>{
     const{title,text,library,isAwesome}=this.state;
 e.preventDefault();
 console.log(title,text,library,isAwesome);
 }
+// This function returns the JSX code that renders the Form component.
     render(){
         const{title,text,library,isAwesome}=this.state;
 
